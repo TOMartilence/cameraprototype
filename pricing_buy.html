@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div style="text-align: center; font-family: 'Ubuntu', sans-serif;">
+      <h2>Payment Console</h2>
+    </div>
+    <main style="margin-top: 25px;" >
+        <div class="container">
+            <div class="row row-cols-1 row-cols-md-3 mb-3 text-center">
+                <div class="col">
+                  <div class="card mb-4 rounded-3 shadow-sm">
+                    <div class="card-header text-bg-danger py-3">
+                      <h4 class="my-0 fw-normal">Basic</h4>
+                    </div>
+                    <div class="card-body">
+                      <h1 class="card-title pricing-card-title"> ₹200<small class="text-body-secondary fw-light"></small></h1>
+                      
+                      <button type="button" class="w-100 btn btn-lg btn-outline-primary">Proceed For Payment</button>
+                    </div>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="card mb-4 rounded-3 shadow-sm reco" >
+                    <div class="card-header text-bg-warning py-3">
+                      <h4 class="my-0 fw-normal">Pro</h4>
+                    </div>
+                    <div class="card-body">
+                      <h1 class="card-title  pricing-card-title"> ₹1000<small class="text-body-secondary fw-light"></small></h1>
+                      
+                      <button type="button" id="getstarted" class="w-100 btn btn-lg btn-primary">Proceed For Payment</button>
+                      <script>
+                            document.getElementById("getstarted").addEventListener("click",function(){
+                                alert("Redirecting you to the payment page");
+                                location.href="./payment.html";
+                            })
+
+                            document.getElementsByClassName("reco")[0].addEventListener("mouseover",function(){
+                              document.getElementById("getstarted").innerHTML="Recommended";
+                            })
+                            
+                            document.getElementsByClassName("reco")[0].addEventListener("mouseout",function(){
+                              document.getElementById("getstarted").innerHTML="Proceed For Payment";
+                            })
+
+                      </script>
+                    </div>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="card mb-4 rounded-3 shadow-sm border-primary">
+                    <div class="card-header py-3 text-bg-success border-primary">
+                      <h4 class="my-0 fw-normal">Executive</h4>
+                    </div>
+                    <div class="card-body">
+                      <h1 class="card-title pricing-card-title"> ₹2000<small class="text-body-secondary fw-light"></small></h1>
+                      
+                      <button type="button" id="getstarted2" class="w-100 btn btn-lg btn-primary">Proceed For Payment</button>
+                      <script>
+                        document.getElementById("getstarted2").addEventListener("click",function(){
+                            alert("You Are Redirected to Payment page");
+                            location.href="./payment.html";
+                        })
+                      </script>
+                    </div>
+                  </div>
+                </div>
+              </div>
+          
+              <h2 class="display-6 text-center mb-4">Compare plans</h2>
+              <hr><br>
+              <div class="table-responsive">
+                <table class="table text-center">
+                  <thead>
+                    <tr>
+                      <th style="width: 34%;"></th>
+                      <th style="width: 22%;">Basic</th>
+                      <th style="width: 22%;">Pro</th>
+                      <th style="width: 22%;">Executive</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <th scope="row" class="text-start">Basic customer support via email or chat.
+                    </th>
+                      <td><svg class="bi" width="24" height="24"><<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check" viewBox="0 0 16 16">
+                        <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"/>
+                      </svg>></use></svg></td>
+                      <td><svg class="bi" width="24" height="24"><<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check" viewBox="0 0 16 16">
+                        <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"/>
+                      </svg>></use></svg></td>
+                      <td><svg class="bi" width="24" height="24"><<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check" viewBox="0 0 16 16">
+                        <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"/>
+                      </svg>></use></svg></td>
+                    </tr>
+                    <tr>
+                      <th scope="row" class="text-start">Digital delivery of high-resolution images to clients.
+                    </th>
+                      <td><svg class="bi" width="24" height="24"><<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check" viewBox="0 0 16 16">
+                        <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"/>
+                      </svg>></use></svg></td>
+                      <td><svg class="bi" width="24" height="24"><<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check" viewBox="0 0 16 16">
+                        <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"/>
+                      </svg>></use></svg></td>
+                      <td><svg class="bi" width="24" height="24"><<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check" viewBox="0 0 16 16">
+                        <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"/>
+                      </svg>></use></svg></td>
+                    </tr>
+                  </tbody>
+          
+                  <tbody>
+                    <tr>
+                      <th scope="row" class="text-start">Advanced photo editing and retouching services for a polished look.
+                    </th>
+                      <td><svg class="bi" width="24" height="24"><use xlink:href="#check"></use></svg></td>
+                      <td><svg class="bi" width="24" height="24"><<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check" viewBox="0 0 16 16">
+                        <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"/>
+                      </svg>></use></svg></td>
+                      <td><svg class="bi" width="24" height="24"><<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check" viewBox="0 0 16 16">
+                        <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"/>
+                      </svg>></use></svg></td>
+                    </tr>
+                    <tr>
+                      <th scope="row" class="text-start">Additional services like slideshow creation or photo album design.
+                    </th>
+                      <td></td>
+                      <td><svg class="bi" width="24" height="24"><<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check" viewBox="0 0 16 16">
+                        <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"/>
+                      </svg>></use></svg></td>
+                      <td><svg class="bi" width="24" height="24"><<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check" viewBox="0 0 16 16">
+                        <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"/>
+                      </svg>></use></svg></td>
+                    </tr>
+                    <tr>
+                      <th scope="row" class="text-start">Extensive photo editing and retouching services for a professional finish.
+                    </th>
+                      <td></td>
+                      <td><svg class="bi" width="24" height="24"><use xlink:href="#check"></use></svg></td>
+                      <td><svg class="bi" width="24" height="24"><<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check" viewBox="0 0 16 16">
+                        <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"/>
+                      </svg>></use></svg></td>
+                    </tr>
+                    <tr>
+                      <th scope="row" class="text-start">Online client proofing and selection gallery for streamlined collaboration.
+                    </th>
+                      <td></td>
+                      <td></td>
+                      <td><svg class="bi" width="24" height="24"><<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check" viewBox="0 0 16 16">
+                        <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"/>
+                      </svg>></use></svg></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+        </div>
+        
+      </main>
+
+
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+
+</body>
+</html>
